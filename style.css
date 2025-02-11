@@ -1,0 +1,261 @@
+:root{
+    --dark1: #0000004d;
+    --dark2: #181c20;
+    --dark3: #212529;
+    --dark4: #2d3135;
+    --dark5: #424549;
+    --dark6: #404346;
+    --dark7: #9c9c9c;
+    --dark8: #dae0e7;
+    --dark9: #262a2e;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* main content */
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+.container{
+    max-height: 90vh;
+    width: 80vw;
+    background-color: var(--dark2);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+}
+
+/* Container heading-1*/
+.head_1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+.headName{
+    font-size: 2rem;
+    color: var(--dark8);
+    font-weight: 600;
+}
+.filter label{
+    color: var(--dark8);
+    font-size: 1.3rem; 
+}
+.filter input{
+    font-size: 1rem;
+    padding: 10px 5px;
+    padding-top: 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--dark5);
+    color: var(--dark8);
+}
+
+/* container heading-2 */
+.head_2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+.addProduct, #sortBy{
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--dark5);
+    color: var(--dark8);
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    cursor: pointer;
+}
+
+/* product table */
+table {
+    width: 100%;
+    padding-top: 15px;
+    border-collapse: collapse;
+}
+th, td{
+    padding:5px 10px;
+    color: var(--dark8);
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+td{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.tableHead_1, .tableData_1{
+    width : 12%
+}
+.tableHead_2, .tableHead_4, .tableData_4, .tableData_2 {
+    width : 15%
+}
+.tableHead_3,.tableData_3{
+    width : 20%
+}
+.tableHead_5,.tableData_5{
+    width : 25%
+}
+
+/* footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.showEntries{
+    color: var(--dark8);
+}
+
+.pagination{
+    background-color: var(--dark5);
+}
+
+.prev-btn, .next-btn, .active{
+    background-color: var(--dark5);
+    color: var(--dark8);
+    padding: 8px 16px;
+    border: solid 1px var(--dark7);
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* pop-up container */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;  
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.popup.open {
+    display: flex;
+}
+
+.popupContainer {
+    background: var(--dark2);
+    color: var(--dark8);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.popupHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.closeBtn {
+    background: transparent;
+    color: var(--dark8);
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.details {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgholder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    margin: 10px;
+}
+
+.upload{
+    width: 100%;
+}
+
+.productInfo td {
+    word-wrap: break-word; 
+    word-break: break-word; 
+    white-space: normal;
+}
+
+.inputFieldContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.inputFieldContainer div {
+    margin-bottom: 15px;
+}
+
+.popupContainer input[type="text"],
+.popupContainer input[type="number"],
+.popupContainer input[type="file"] {
+    color: var(--dark8);
+    background-color: var(--dark5);
+    border: 1px solid var(--dark7);
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--dark5);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--dark5);
+    color: var(--dark8);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submitBtn:hover {
+    background-color: var(--dark6);
+}
+
+/* read, edit, delete */
+
+.readBtn, .editBtn, .deleteBtn{
+    font-size: 1rem;
+    padding: 9px;
+    margin: 4px;
+    border: solid 2px var(--dark7);
+    background-color: var(--dark6);
+    color: var(--dark8);
+}

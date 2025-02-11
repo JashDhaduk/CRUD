@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Operations</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- header -->
+        <header>
+            <div class="head_1">        
+                <div class="headName">Product Management System</div>
+                <div class="filter">
+                    <label for="search">Search:</label>
+                    <input type="text" id="search" placeholder="Filter by productID" />
+                </div>
+            </div>
+            <div class="head_2">
+                <button class="addProduct">New Product</button>
+                <select name="" id="sortBy">
+                    <option value="">Sort By:</option>
+                    <option value="ID">Product ID</option>
+                    <option value="Name">Product Name</option>
+                    <option value="Price">Product Price</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- product table -->
+        <table>
+            <thead class="tableHeading">
+                <tr>
+                    <th class="tableHead_1">Product Image</th>
+                    <th class="tableHead_2">Product ID</th>
+                    <th class="tableHead_3">Product Name</th>
+                    <th class="tableHead_4">Product Price</th>
+                    <th class="tableHead_5">Product Description</th>
+                </tr>
+            </thead>
+            <tbody class="productInfo">
+                <tr>
+                    <td class="tableData_1">
+                        <img src="images.png" alt="" height="40" width="40" />
+                    </td>
+                    <td class="tableData_2">PMS12345</td>
+                    <td class="tableData_3">iphone</td>
+                    <td class="tableData_4">$2000</td>
+                    <td class="tableData">Smartphone</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- footer -->
+        <footer>
+            <span class="showEntries">Showing 1 to 7 of total entries</span>
+            <div class="pagination"></div>
+        </footer>
+    </div>
+
+    <!-- popup-Container -->
+    <div class="popup">
+        <div class="popupContainer">
+
+            <!-- pop-up header -->
+            <header class="popupHeader">
+                <h2 class="title">Fill the Form</h2>
+                <button class="closeBtn">&times;</button>
+            </header>
+
+            <!-- pop-up content -->
+            <div class="details">
+                <form action="#" id="myForm">
+                    <div class="imgholder">
+                        <label for="uploadimg" class="upload" id="imageUploadLabel">
+                            <input type="file" name="uploadimg" id="uploadimg" class="picture"
+                                accept="image/png, image/jpeg" />
+                        </label>
+                        <img src="images.png" alt="Product Image" width="150" height="150" class="img"
+                            id="imagePreview" />
+                    </div>
+
+                    <div class="inputFieldContainer">
+                        <div class="productID">
+                            <label for="pID">Product ID:</label>
+                            <input type="text" name="" id="pID" required />
+                        </div>
+
+                        <div class="productName">
+                            <label for="pName">Product Name:</label>
+                            <input type="text" name="" id="pName" required />
+                        </div>
+
+                        <div class="productPrice">
+                            <label for="pPrice">Product Price:</label>
+                            <input type="number" name="" id="pPrice" required />
+                        </div>
+
+                        <div class="productDescription">
+                            <label for="pDes">Product Description:</label>
+                            <input type="text" name="" id="pDes" required />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- pop-up footer -->
+            <footer class="popupFooter">
+                <button form="myForm" class="submitBtn">Submit</button>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
